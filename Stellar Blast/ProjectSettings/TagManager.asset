@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Friendly
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Finish
   - Water
   - UI
   - 

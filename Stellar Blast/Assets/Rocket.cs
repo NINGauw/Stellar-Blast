@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -22,10 +23,12 @@ public class Rocket : MonoBehaviour
     void OnCollisionEnter(Collision collision){
         switch(collision.gameObject.tag){
             case "Friendly":
-            print("friendly");
+            break;
+            case "Finish":
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             break;
             default:
-            print("dead");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             break;
         }
     }

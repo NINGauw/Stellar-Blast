@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using Palmmedia.ReportGenerator.Core;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class MenuManagement : MonoBehaviour
+{
+    [SerializeField]private Button startButton;
+    [SerializeField]private Button exitButton;
+    void Awake()
+    {
+        startButton.onClick.AddListener(()=>{
+            SceneManager.LoadScene(1);
+        });
+        exitButton.onClick.AddListener(()=>{
+            Application.Quit();
+        });
+    }
+
+    
+    void Update()
+    {
+        
+    }
+}
