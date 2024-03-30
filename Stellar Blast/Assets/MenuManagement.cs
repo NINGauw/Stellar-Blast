@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Palmmedia.ReportGenerator.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,11 +16,5 @@ public class MenuManagement : MonoBehaviour
         exitButton.onClick.AddListener(()=>{
             Application.Quit();
         });
-    }
-
-    
-    void Update()
-    {
-        
     }
 }

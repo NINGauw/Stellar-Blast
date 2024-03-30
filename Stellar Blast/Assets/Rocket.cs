@@ -10,6 +10,8 @@ public class Rocket : MonoBehaviour
     [SerializeField]private AudioSource thrustSound;
     [SerializeField]private float rotationspeed;
     [SerializeField]private float thrustSpeed;
+    enum State{Alive, Dying, Transcending}
+    State state = State.Alive;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -17,21 +19,40 @@ public class Rocket : MonoBehaviour
 
     void Update()
     {
-        Thrust();
-        Rotate();
+        if(state == State.Alive){
+            Thrust();
+            Rotate();
+        }
+        
     }
     void OnCollisionEnter(Collision collision){
+        if(state != State.Alive){
+            return;
+        }
         switch(collision.gameObject.tag){
             case "Friendly":
             break;
             case "Finish":
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            break;
+                state = State.Transcending;
+                Invoke("LoadNextScene", 1f);
+                break;
             default:
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            break;
+                state = State.Dying;
+                Invoke("Death", 1f);
+                break;
         }
     }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void Death()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void Rotate()
     {
         rigidBody.freezeRotation = true;
