@@ -245,6 +245,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 58529995659131185, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58529995659131185, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58529995659131185, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58529995659131185, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58529995659131185, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58529995659131185, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1247830582316099674, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
       propertyPath: m_Name
       value: RocketShip 1
@@ -287,6 +311,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2808103314205060831, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448297247095669989, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448297247095669989, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448297247095669989, guid: b862eec97644a70458a89e2d33f86a83, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
