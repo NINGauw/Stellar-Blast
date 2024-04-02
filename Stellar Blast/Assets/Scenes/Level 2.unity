@@ -2449,6 +2449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Land Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 6107406421214347477, guid: 75d1b766d607f3f48b9495167c13f8ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
