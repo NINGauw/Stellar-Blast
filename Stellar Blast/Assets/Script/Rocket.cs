@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Rocket : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Rocket : MonoBehaviour
     [SerializeField]private ParticleSystem thrustParticle;
     [SerializeField]private ParticleSystem deathParticle;
     [SerializeField]private ParticleSystem winParticle;
+    [SerializeField]private FixedJoystick joyStick;
+    [SerializeField]private ThrustButton thrustButton;
 
     [SerializeField]private float rotationspeed;
     [SerializeField]private float thrustSpeed;
@@ -79,12 +82,23 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(-Vector3.forward * rotationspeed * Time.deltaTime);
         }
+        else if (joyStick.Horizontal < 0)
+        {
+            transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
+        }
+        else if (joyStick.Horizontal > 0)
+        {
+            transform.Rotate(-Vector3.forward * rotationspeed * Time.deltaTime);
+        }
     }
 
     private void RespondToThrustInput()
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            ApplyThrust();
+        }
+        if (thrustButton.pressed == true){
             ApplyThrust();
         }
         else
